@@ -1,0 +1,262 @@
+Last login: Thu Apr 13 10:51:56 on ttys000
+(base) yosefhajeer@Yosefs-MacBook-Pro Game % Conda
+usage: Conda [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean             Remove unused packages and caches.
+    compare           Compare packages between conda environments.
+    config            Modify configuration values in .condarc. This is modeled
+                      after the git config command. Writes to the user
+                      .condarc file (/Users/yosefhajeer/.condarc) by default.
+                      Use the --show-sources flag to display all identified
+                      configuration locations on your computer.
+    create            Create a new conda environment from a list of specified
+                      packages.
+    info              Display information about current conda install.
+    init              Initialize conda for shell interaction.
+    install           Installs a list of packages into a specified conda
+                      environment.
+    list              List installed packages in a conda environment.
+    package           Low-level conda package utility. (EXPERIMENTAL)
+    remove (uninstall)
+                      Remove a list of packages from a specified conda
+                      environment.
+    rename            Renames an existing environment.
+    run               Run an executable in a conda environment.
+    search            Search for packages and display associated
+                      information.The input is a MatchSpec, a query language
+                      for conda packages. See examples below.
+    update (upgrade)  Updates conda packages to the latest compatible version.
+    notices           Retrieves latest channel notifications.
+
+options:
+  -h, --help          Show this help message and exit.
+  -V, --version       Show the conda version number and exit.
+
+conda commands available from other packages (legacy):
+  build
+  content-trust
+  convert
+  debug
+  develop
+  env
+  index
+  inspect
+  metapackage
+  pack
+  render
+  repo
+  server
+  skeleton
+  token
+  verify
+(base) yosefhajeer@Yosefs-MacBook-Pro Game % sh
+cd ~/Desktop/tic-tac-toe-py
+sh-3.2$ sh
+sh-3.2$ conda create -n tictactoe-env python=3.8
+WARNING: A conda environment already exists at '/Users/yosefhajeer/anaconda3/envs/tictactoe-env'
+Remove existing environment (y/[n])? y
+
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 23.1.0
+  latest version: 23.3.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+Or to minimize the number of packages updated during conda update use
+
+     conda install conda=23.3.1
+
+
+
+## Package Plan ##
+
+  environment location: /Users/yosefhajeer/anaconda3/envs/tictactoe-env
+
+  added / updated specs:
+    - python=3.8
+
+
+The following NEW packages will be INSTALLED:
+
+  ca-certificates    pkgs/main/osx-64::ca-certificates-2023.01.10-hecd8cb5_0 
+  certifi            pkgs/main/osx-64::certifi-2022.12.7-py38hecd8cb5_0 
+  libcxx             pkgs/main/osx-64::libcxx-14.0.6-h9765a3e_0 
+  libffi             pkgs/main/osx-64::libffi-3.4.2-hecd8cb5_6 
+  ncurses            pkgs/main/osx-64::ncurses-6.4-hcec6c5f_0 
+  openssl            pkgs/main/osx-64::openssl-1.1.1t-hca72f7f_0 
+  pip                pkgs/main/osx-64::pip-23.0.1-py38hecd8cb5_0 
+  python             pkgs/main/osx-64::python-3.8.16-h218abb5_3 
+  readline           pkgs/main/osx-64::readline-8.2-hca72f7f_0 
+  setuptools         pkgs/main/osx-64::setuptools-65.6.3-py38hecd8cb5_0 
+  sqlite             pkgs/main/osx-64::sqlite-3.41.2-h6c40b1e_0 
+  tk                 pkgs/main/osx-64::tk-8.6.12-h5d9f67b_0 
+  wheel              pkgs/main/osx-64::wheel-0.38.4-py38hecd8cb5_0 
+  xz                 pkgs/main/osx-64::xz-5.2.10-h6c40b1e_1 
+  zlib               pkgs/main/osx-64::zlib-1.2.13-h4dc903c_0 
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate tictactoe-env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+sh-3.2$ sh
+sh-3.2$ conda activate tictactoe-env
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+sh-3.2$ sh
+sh-3.2$ pip install -r requirements.txt
+Requirement already satisfied: pytest in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from -r requirements.txt (line 18)) (7.1.2)
+Requirement already satisfied: pandas in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from -r requirements.txt (line 23)) (1.5.3)
+Requirement already satisfied: attrs>=19.2.0 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (22.1.0)
+Requirement already satisfied: iniconfig in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (1.1.1)
+Requirement already satisfied: packaging in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (22.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (1.0.0)
+Requirement already satisfied: py>=1.8.2 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (1.11.0)
+Requirement already satisfied: tomli>=1.0.0 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pytest->-r requirements.txt (line 18)) (2.0.1)
+Requirement already satisfied: python-dateutil>=2.8.1 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pandas->-r requirements.txt (line 23)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pandas->-r requirements.txt (line 23)) (2022.7)
+Requirement already satisfied: numpy>=1.21.0 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from pandas->-r requirements.txt (line 23)) (1.23.5)
+Requirement already satisfied: six>=1.5 in /Users/yosefhajeer/anaconda3/lib/python3.10/site-packages (from python-dateutil>=2.8.1->pandas->-r requirements.txt (line 23)) (1.16.0)
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): 'COMPUTER-EASY'
+SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): 'HUMAN'
+Traceback (most recent call last):
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/yosefhajeer/Desktop/game/app/game.py", line 110, in <module>
+    select_player(letter="X", strategy=x_strategy),
+  File "/Users/yosefhajeer/Desktop/game/app/player.py", line 27, in select_player
+    raise PlayerSelectionError("OOPS, unrecognized player type. Please try again!")
+app.player.PlayerSelectionError: OOPS, unrecognized player type. Please try again!
+sh-3.2$ Human
+sh: Human: command not found
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): HUMAN
+SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): COMPUTER-EASY
+Would you like to use a pre-saved game state? (Y/N): N
+
+                A   B   C
+
+            1     |   |  
+               -----------
+            2     |   |  
+               -----------
+            3     |   |  
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): B2
+
+                A   B   C
+
+            1     |   |  
+               -----------
+            2     | X |  
+               -----------
+            3     |   |  
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1     |   |  
+               -----------
+            2     | X |  
+               -----------
+            3     |   | O
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A1
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     | X |  
+               -----------
+            3     |   | O
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     | X |  
+               -----------
+            3   O |   | O
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): 3C
+OOPS UNRECOGNIZED SQUARE NAME '3C'. PLEASE TRY AGAIN...
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A2
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2   X | X |  
+               -----------
+            3   O |   | O
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2   X | X |  
+               -----------
+            3   O | O | O
+
+        
+{'winner': {'letter': 'O', 'square_names': ['A3', 'B3', 'C3']}, 'reason': 'THREE_IN_A_ROW', 'message': 'O WINS!'}
+sh-3.2$ 
