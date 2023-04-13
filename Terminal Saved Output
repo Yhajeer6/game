@@ -1,4 +1,5 @@
 Last login: Thu Apr 13 10:51:56 on ttys000
+(base) yosefhajeer@Yosefs-MacBook-Pro ~ % cd ~/Desktop/Game
 (base) yosefhajeer@Yosefs-MacBook-Pro Game % Conda
 usage: Conda [-h] [-V] command ...
 
@@ -245,6 +246,179 @@ PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A2
             2   X | X |  
                -----------
             3   O |   | O
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2   X | X |  
+               -----------
+            3   O | O | O
+
+        
+{'winner': {'letter': 'O', 'square_names': ['A3', 'B3', 'C3']}, 'reason': 'THREE_IN_A_ROW', 'message': 'O WINS!'}
+sh-3.2$ -m app.game
+sh: -m: command not found
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): HUMAN   [ SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): COMPUTER-EASY
+Traceback (most recent call last):
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/yosefhajeer/Desktop/game/app/game.py", line 110, in <module>
+    select_player(letter="X", strategy=x_strategy),
+  File "/Users/yosefhajeer/Desktop/game/app/player.py", line 27, in select_player
+    raise PlayerSelectionError("OOPS, unrecognized player type. Please try again!")
+app.player.PlayerSelectionError: OOPS, unrecognized player type. Please try again!
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): HUMAN
+SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): COMPUTER-EASY
+Would you like to use a pre-saved game state? (Y/N): Y
+
+                A   B   C
+
+            1   X | O |  
+               -----------
+            2     | X |  
+               -----------
+            3     |   |  
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X | O |  
+               -----------
+            2     | X |  
+               -----------
+            3     | O |  
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A2
+
+                A   B   C
+
+            1   X | O |  
+               -----------
+            2   X | X |  
+               -----------
+            3     | O |  
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X | O |  
+               -----------
+            2   X | X |  
+               -----------
+            3     | O | O
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A#
+OOPS UNRECOGNIZED SQUARE NAME 'A#'. PLEASE TRY AGAIN...
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A3
+
+                A   B   C
+
+            1   X | O |  
+               -----------
+            2   X | X |  
+               -----------
+            3   X | O | O
+
+        
+{'winner': {'letter': 'X', 'square_names': ['A1', 'A2', 'A3']}, 'reason': 'THREE_IN_A_ROW', 'message': 'X WINS!'}
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): HUMAN
+SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): COMPUTER-EASY
+Traceback (most recent call last):
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Users/yosefhajeer/anaconda3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/Users/yosefhajeer/Desktop/game/app/game.py", line 111, in <module>
+    select_player(letter="O", strategy=o_strategy),
+  File "/Users/yosefhajeer/Desktop/game/app/player.py", line 27, in select_player
+    raise PlayerSelectionError("OOPS, unrecognized player type. Please try again!")
+app.player.PlayerSelectionError: OOPS, unrecognized player type. Please try again!
+sh-3.2$ sh
+sh-3.2$ python -m app.game
+SELECT X PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): HUMAN
+SELECT O PLAYER TYPE ('HUMAN' / 'COMPUTER-EASY' / 'COMPUTER-HARD'): COMPUTER-EASY
+Would you like to use a pre-saved game state? (Y/N): N
+
+                A   B   C
+
+            1     |   |  
+               -----------
+            2     |   |  
+               -----------
+            3     |   |  
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A1
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     |   |  
+               -----------
+            3     |   |  
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     |   |  
+               -----------
+            3     | O |  
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): B2
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     | X |  
+               -----------
+            3     | O |  
+
+        
+PLAYER O THINKING...
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2     | X |  
+               -----------
+            3     | O | O
+
+        
+PLAYER X PLEASE SELECT A SQUARE (i.e. 'A1'): A2
+
+                A   B   C
+
+            1   X |   |  
+               -----------
+            2   X | X |  
+               -----------
+            3     | O | O
 
         
 PLAYER O THINKING...
